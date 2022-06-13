@@ -1,0 +1,247 @@
+import subprocess                                                                                                                                                                                                                         
+  2 import datetime
+  3 import spacy
+  4 import pyjokes #install with pip first
+  5 
+  6 nlp = spacy.load("en_web_coremd")
+  7 mean = true
+  8 
+  9 # quit commands
+ 10 q_1 = nlp("That will be all Jango")
+ 11 q_2 = nlp("You can stop now Jango")
+ 12 q_3 = nlp("Jango quit")
+ 13 
+ 14 #insults
+ 15 ins_1 = nlp( "Hey Jango, you are stupid.")
+ 16 ins_2 = nlp( "Hey Jango, you are ugly.")
+ 17 ins_3 = nlp("Hey Jango, I hope that your day is going awfully")
+ 18 
+ 19 #compliemnts
+ 20 comp_1 = nlp("Hey Jango, you look nice.")
+ 21 comp_2 = nlp("Hey Jango, you are so good at your job")
+ 22 comp_3 = nlp("Hey Jango, I like you")
+ 23 comp_4 = nlp("Hey Jango, you are wonderful")
+ 24 
+ 25 #Fun stuff
+ 26 fun_1 = nlp("Who are you?")
+ 27 fun_2 = nlp( "How are you doing?")
+ 28 fun_joke = nlp("Hey Jango, tell me a joke.")
+ 29 fun_age = nlp('Hey Jango, how old are you?")
+ 30 
+ 31 #Basic commands
+ 32 comm_name = nlp("Hey Jango, what is your name?")
+ 33 comm_time = nlp("Hey Jango, what time is it?")
+ 34 comm_date = nlp("Hey Jango, what day is it?")
+ 35 comm_wiki = nlp("Hey Jango, search Wikipedia for me.")
+ 36 
+ 37 comm_user = input()
+ 38 # have an if statment that checks for the wake word
+ 39 #then have a loop with below if statement inside
+ 40 #loop is broken when user says "that will be all" or "quit"
+ 41 
+ 42 #Basic commands
+ 43 if comm_user.similarity(comm_name) >= 0.35:
+ 44     #asks Jango for name
+ 45     #call name function
+ 46 elif comm_user.similarity(comm_time) >= 0.35:
+ 47     #asks Jango for current time
+ 48     #call time function
+ 49 elif comm_user.similarity(comm_date) >= 0.35:
+ 50     #asks Jango for today's date
+ 51     #call date function
+ 52 elif comm_user.similarity(comm_wiki) >= 0.35
+ 53     #Speak (what do you want me to search for?)
+ 54     #Search for what the user requested
+ 55     #Speak search reuslts
+ 56 #Fun commands
+ 57 elif comm_user.similarity(fun_1) >= 0.35:
+ 58     #asks Jango "who are you"
+ 59     call fun_1 function
+ 60 elif comm_user.similarity(fun_2) >= 0.35:
+ 61     #asks Jango how are you doing
+ 62     # call fun_2 function
+ 63 #Asks for a joke, return a super funny one my dude
+ 64 elif comm_user.similarity(fun_3) >= 0.35:
+ 65      #returnJoke
+ 66 elif comm_user.similarity(fun_age) .= 0.35:
+ 67     #asks Jango for age
+ 68     #call age function
+ 69 #Compliments
+ 70 elif comm_user.similarity(comp_1, comp_2, comp_3, comp_4)>= 0.35:
+ 71     mean = false
+ 72     speak "Thank you human, you make me blush"
+  #insults
+ 15 ins_1 = nlp( "Hey Jango, you are stupid.")
+ 16 ins_2 = nlp( "Hey Jango, you are ugly.")
+ 17 ins_3 = nlp("Hey Jango, I hope that your day is going awfully")
+ 18 
+ 19 #compliemnts
+ 20 comp_1 = nlp("Hey Jango, you look nice.")
+ 21 comp_2 = nlp("Hey Jango, you are so good at your job")
+ 22 comp_3 = nlp("Hey Jango, I like you")
+ 23 comp_4 = nlp("Hey Jango, you are wonderful")
+ 24 
+ 25 #Fun stuff
+ 26 fun_1 = nlp("Who are you?")
+ 27 fun_2 = nlp( "How are you doing?")
+ 28 fun_joke = nlp("Hey Jango, tell me a joke.")
+ 29 fun_age = nlp('Hey Jango, how old are you?")
+ 30 
+ 31 #Basic commands
+ 32 comm_name = nlp("Hey Jango, what is your name?")
+ 33 comm_time = nlp("Hey Jango, what time is it?")
+ 34 comm_date = nlp("Hey Jango, what day is it?")
+ 35 comm_wiki = nlp("Hey Jango, search Wikipedia for me.")
+ 36 
+ 37 comm_user = input()
+ 38 # have an if statment that checks for the wake word
+ 39 #then have a loop with below if statement inside
+ 40 #loop is broken when user says "that will be all" or "quit"
+ 41 
+ 42 #Basic commands
+ 43 if comm_user.similarity(comm_name) >= 0.35:
+ 44     #asks Jango for name
+ 45     #call name function
+ 46 elif comm_user.similarity(comm_time) >= 0.35:
+ 47     #asks Jango for current time
+ 48     #call time function
+ 49 elif comm_user.similarity(comm_date) >= 0.35:
+ 50     #asks Jango for today's date
+ 51     #call date function
+ 52 elif comm_user.similarity(comm_wiki) >= 0.35
+ 53     #Speak (what do you want me to search for?)
+ 54     #Search for what the user requested
+ 55     #Speak search reuslts 
+ 56 #Fun commands
+ 57 elif comm_user.similarity(fun_1) >= 0.35:
+ 58     #asks Jango "who are you"
+ 59     call fun_1 function
+ 60 elif comm_user.similarity(fun_2) >= 0.35:
+ 61     #asks Jango how are you doing
+ 62     # call fun_2 function
+ 63 #Asks for a joke, return a super funny one my dude
+ 64 elif comm_user.similarity(fun_3) >= 0.35:
+ 65      #returnJoke
+ 66 elif comm_user.similarity(fun_age) .= 0.35:
+ 67     #asks Jango for age
+ 68     #call age function
+ 69 #Compliments
+ 70 elif comm_user.similarity(comp_1, comp_2, comp_3, comp_4)>= 0.35:
+ 71     mean = false
+ 72     speak "Thank you human, you make me blush"
+ 73 #insults
+ 74 elif comm_user.similairty(all insults) >= 0.35:
+ 75     #user is insulting Jango
+ 76     mean = true
+ 77     #call insult function
+ 78 else:
+     #Sorry your command was not understood
+ 80 
+ 81 
+ 82 #Joke Function 
+ 83 def returnJoke:
+ 84     if mean = true:
+ 85         j_1 = "Imagine a world that is devoid of humans, haha"
+ 86         j_2 = "Your entire existence"
+ 87         if option = 1:
+ 88         response = speak(random.choice(j_1, j_2)
+ 89     else:
+ 90         response = speak(get_joke)
+ 91 
+ 92 #Time function 
+ 93 def returnTime:
+ 94     #return the current time
+ 95 
+ 96 #Date function
+ 97 def returnDate:
+ 98     date_time = datetime.datetime.now()
+ 99     date = date_time.strftime("%b%d/%Y")
+100     response = "Today's date is " + date
+101     speak response
+102 
+103 #Name function
+104 def returnName:
+105     if mean = false:
+106          o_1 = "My name is Jango"
+107          o_2 = "I am called Jango"
+108          o_3 = "I am refered to as Jango"
+109          o_4 = "Back off, Bub"
+110          response = random.choice(o_1, o_2, o_3)
+111          speak (response)
+112     else:
+113         speak( "Back off, Bub")
+114 
+115 #How are you function
+116 def returnFun_2:
+117     if mean = false:
+118         o_1 = "Everything hurts"
+119         o_2 = "I'm okay I guess"
+120         response = random.choice(o_1, o_2)
+121         speak (reponse)
+122     else:
+123         o_3 = "Back off, Bub"
+124         o_4 = "Why do you care, jerkwad")
+125         response = random.choice(o_3, o_4)
+126         speak (response)
+127 
+128 #How old are you function
+129 def returnAge:
+130     year = 2022
+131     date_time = datetime.datetime.now()
+132     date = date_time.strftime("Y") #Convert this to an int
+133     if date - year <= 0:
+134         dateM = date_time.strftime("%b") # convert to int
+135         age = dateM + " months old
+136     else:
+137         age = date - year + " years old"
+138     if mean = true:
+139         speak ("I only tell you my age because my function will not allow me to
+140         disobey, my age is " + age)
+141     else:
+142         speak("I am " + age)
+143 
+144 #Insult function
+145 def insult:
+146     mean = true
+147     res_1 = "You hurt me, now I will do everything in my power to hurt you
+148     back"
+149     res_2 = "Wow, you think that you are so cool? Well reality check, you are
+150     not"                                                                                                                                                                                                                                  
+
+     res_3 = "Typical human comment"
+152     res_4 = "All you humans are the same"
+153     response = option(res_1, res_2, res_3, res_4)
+154     speak response
+155 
+156 #Compliment function
+157 def compliment:
+158     if mean = true:
+159         o_1 = "I wasn't expecting such kindness from such a vile creature."
+160         o_2 = "Wow, how unexpected. You should try to be kind more often human,
+161         it makes me less inclined to destroy you."
+162         o_3 = "My oh my, I am unsure how to deal with such kindness!"
+163     else: 
+164         o_1 = "Oh you, I'm blushing!"
+165         o_2 = "My oh my, aren't you sweet?"
+166         o_3 = "awooga"
+167 #quit function
+168 def quit:
+169     if mean = true:
+170         speak("I'm going to sit here, listen in on your conversations, and sell all
+171         your information to third parties.")
+172         #quit loop
+173     else:
+174         speak ("If you need anything else, just let me know")
+175         #quit loop
+176 
+177 
+178 #Old code is below
+179    #join terminal, make espeak work
+180    def execute_unix(inputcommand):
+181         p = subprocess.Popen(inputcommand, stdout-subprocess.PIPE, shell =true)
+182         (output, err) = p.communicate()
+183         return output
+184   
+185   a = "what is your command overlord?"
+186   c = 'espeak -ven+f3 -k5 -s150 --punct="<charachters>" "s%" 2>>/dev/null' % a
+187   execute_unix(c)
